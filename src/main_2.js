@@ -10,7 +10,7 @@ const geometry = new THREE.BoxGeometry(3, 1.8, 2)
 // const material = new THREE.MeshBasicMaterial({ color: 0x00ff00, side : THREE.DoubleSide});
 
 let loader = new THREE.TextureLoader();
-let color = loader.load("images/paper_0025_color_1k.jpg")
+let color = loader.load("")
 let roughness = loader.load("images/roughness.jpg");
 let normal = loader.load("images/normal.png")
 let hight = loader.load("images/height.png")
@@ -40,31 +40,9 @@ point.position.set(.3,-1.34,1)
 scene.add(point)
 
 const pointLightHelper = new THREE.PointLightHelper( point,0.2 );
-scene.add( pointLightHelper );
-
-// // create a directional light with high intensity
-// const highIntensityLight = new THREE.DirectionalLight(0xffffff, 2)
-// highIntensityLight.position.set(10, 20, 15);
-// scene.add(highIntensityLight);
-
-// // create a directional light to simulate  sunlight
-// const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-// directionalLight.position.set(5, 10, 7.5)
-// scene.add(directionalLight);
-
-// const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-// scene.add(ambientLight);
-
-// //create a point light to simulate a light bulb
-// const pointLight = new THREE.PointLight(0xffffff, 0.5, 100);
-// pointLight.position.set(0, 5, 0);
-// scene.add(pointLight);
+scene.add(pointLightHelper);
 
 
-// const DirectionalLightHelper = new THREE.DirectionalLightHelper(directionalLight, 5);
-// scene.add(DirectionalLightHelper);
-// const pointLightHelper = new THREE.PointLightHelper(pointLight, 5);
-// scene.add(pointLightHelper);
 
 // GUI Setup
 const gui = new lil.GUI();

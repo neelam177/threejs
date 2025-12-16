@@ -1,0 +1,85 @@
+what is web gl & three-js
+making a cube as quick as possible
+understanding the parts
+transformations
+animations
+setting up vite
+making responsive
+orbit controls
+geometries
+materials
+textures
+lil-gui
+lights
+adding 3d models
+
+
+1️⃣ What is WebGL & Three.js
+
+Meaning:
+WebGL is a browser API that uses the GPU to render 2D and 3D graphics. Three.js is a JavaScript library that makes WebGL easier to use.
+
+2️⃣ Making a cube as quick as possible
+
+Meaning:
+Creating a basic 3D cube to understand the minimum setup required in Three.js.
+
+3️⃣ Understanding the parts
+
+Meaning:
+Learning the core components of Three.js such as scene, camera, geometry, material, mesh, and renderer.
+
+4️⃣ Transformations
+
+Meaning:
+Moving, rotating, and scaling 3D objects.
+
+5️⃣ Animations
+
+Meaning:
+Changing object properties over time to create motion.
+
+6️⃣ Setting up Vite
+
+Meaning:
+Using Vite to quickly set up a modern and fast development environment.
+
+7️⃣ Making responsive
+
+Meaning:
+Adjusting the canvas and camera when the browser window size changes.
+
+8️⃣ Orbit Controls
+
+Meaning:
+Allowing users to rotate, zoom, and pan the 3D scene using the mouse.
+
+9️⃣ Geometries
+
+Meaning:
+Defining the shape of 3D objects such as boxes, spheres, and planes.
+
+🔟 Textures
+
+Meaning:
+Applying images to 3D objects to give them a realistic surface appearance.
+
+1️⃣1️⃣ Materials
+
+Meaning:
+Defining how objects look and react to light, including color, shine, and reflections.
+
+1️⃣2️⃣ lil-gui
+
+Meaning:
+Using a graphical control panel to adjust values in real time during development.
+
+1️⃣3️⃣ Lights
+
+Meaning:
+Illuminating the 3D scene to make objects visible and realistic.
+
+1️⃣4️⃣ Adding 3D Models
+
+Meaning:
+Loading and displaying external 3D models like GLTF or GLB files in the scene.

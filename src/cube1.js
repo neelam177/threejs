@@ -29,21 +29,33 @@ const cylinder = new THREE.Mesh(
 );
 objects.push(cylinder);
 
+// Object 4 - Yellow Cone
+const cone = new THREE.Mesh(
+    new THREE.ConeGeometry(0.5, 1, 32),
+    new THREE.MeshBasicMaterial({ color: 0xffff00 })
+);
+objects.push(cone);
 
+// Object 5 - Purple Torus
+const torus = new THREE.Mesh(
+    new THREE.TorusGeometry(0.5, 0.2, 16, 100),
+    new THREE.MeshBasicMaterial({ color: 0xff00ff })
+);
+objects.push(torus);
 
-// // Object 6 - Orange Octahedron
-// const octahedron = new THREE.Mesh(
-//     new THREE.OctahedronGeometry(0.7),
-//     new THREE.MeshBasicMaterial({ color: 0xff8800 })
-// );
-// objects.push(octahedron);
+// Object 6 - Orange Octahedron
+const octahedron = new THREE.Mesh(
+    new THREE.OctahedronGeometry(0.7),
+    new THREE.MeshBasicMaterial({ color: 0xff8800 })
+);
+objects.push(octahedron);
 
-// // Object 7 - Cyan Dodecahedron
-// const dodecahedron = new THREE.Mesh(
-//     new THREE.DodecahedronGeometry(0.6),
-//     new THREE.MeshBasicMaterial({ color: 0x00ffff })
-// );
-// objects.push(dodecahedron);
+// Object 7 - Cyan Dodecahedron
+const dodecahedron = new THREE.Mesh(
+    new THREE.DodecahedronGeometry(0.6),
+    new THREE.MeshBasicMaterial({ color: 0x00ffff })
+);
+objects.push(dodecahedron);
 
 // Add all objects to scene but make them invisible initially
 objects.forEach(obj => {

@@ -2,6 +2,9 @@
 export default {
   content: [
     "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src1/**/*.{js,ts,jsx,tsx}",
+    "./transition_effect/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {},

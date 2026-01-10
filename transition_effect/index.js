@@ -42,5 +42,3 @@ function animate() {
   requestAnimationFrame(animate);
   transition.render(clock.getDelta());
 }
-console.log(window.innerWidth, window.innerHeight);
-console.log(window.innerWidth / window.innerHeight);

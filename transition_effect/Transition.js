@@ -5,7 +5,7 @@ const transitionParams = {
   transition: 0,
   texture: 5,
   cycle: true,
-  animate: false, // Disable auto animation
+  animate: true, // Disable auto animation
   // threshold: 0.3,
 };
 
@@ -105,7 +105,7 @@ export function getTransition({ renderer, sceneA, sceneB }) {
   
   // Smooth transition animation
   const smoothTransition = () => {
-    scrollY += (targetScrollY - scrollY) * 0.1; // Smooth interpolation
+    scrollY += (targetScrollY - scrollY) * 0.1; // Smooth 
     transitionParams.transition = scrollY;
     requestAnimationFrame(smoothTransition);
   };

@@ -57,15 +57,15 @@ const dodecahedron = new THREE.Mesh(
 );
 objects.push(dodecahedron);
 
-// Add all objects to scene but make them invisible initially
-objects.forEach(obj => {
-    obj.visible = false;
+// Position objects in a circle so all are visible
+const radius = 3;
+objects.forEach((obj, index) => {
+    const angle = (index / objects.length) * Math.PI * 2;
+    obj.position.x = Math.cos(angle) * radius;
+    obj.position.z = Math.sin(angle) * radius;
+    obj.visible = true; // Make all objects visible
     scene.add(obj);
 });
-
-// Show first object
-objects[0].visible = true;
-let currentObjectIndex = 0;
 
 
 const canvas = document.querySelector("#canvas");

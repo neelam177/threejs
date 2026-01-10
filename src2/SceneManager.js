@@ -8,8 +8,8 @@ class SceneManager {
         this.currentSceneIndex = 0;
         this.isTransitioning = false;
         this.transitionProgress = 0;
-        this.transitionDuration = 3000; // 2 seconds
-        this.autoTransitionInterval = 3000; // 8 seconds
+        this.transitionDuration = 1500; // Smoother, faster transition
+        this.autoTransitionInterval = 2000; // Longer interval between auto transitions
         this.lastTransitionTime = Date.now();
         
         // Renderer setup
@@ -61,9 +61,12 @@ class SceneManager {
         const elapsed = Date.now() - this.transitionStartTime;
         this.transitionProgress = Math.min(elapsed / this.transitionDuration, 1);
         
-        // Smooth easing
-        const easeInOut = t => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-        this.transitionProgress = easeInOut(this.transitionProgress);
+        // Smoother easing function for seamless transitions
+        const easeInOutCubic = t => t < 0.5 
+            ? 4 * t * t * t 
+            : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        
+        this.transitionProgress = easeInOutCubic(this.transitionProgress);
         
         if (elapsed >= this.transitionDuration) {
             this.isTransitioning = false;
@@ -100,12 +103,14 @@ class SceneManager {
             if (child.material) {
                 if (Array.isArray(child.material)) {
                     child.material.forEach(mat => {
-                        mat.transparent = opacity < 1;
+                        mat.transparent = true; // Always transparent for smooth blending
                         mat.opacity = opacity;
+                        mat.needsUpdate = true; // Force material update
                     });
                 } else {
-                    child.material.transparent = opacity < 1;
+                    child.material.transparent = true; // Always transparent for smooth blending
                     child.material.opacity = opacity;
+                    child.material.needsUpdate = true; // Force material update
                 }
             }
         });
